@@ -30,10 +30,8 @@ export default class CreateAvis extends Component {
         }
 
         console.log(noticed);
-        
-        const port = process.env.PORT || 5000;
-
-        axios.post(`http://localhost:${port}/avis/add/`, noticed)
+ 
+        axios.post('http://localhost:5000/avis/add/', noticed)
         .then(res => console.log(res.data));
 
         window.location = "/votre-avis";
