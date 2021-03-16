@@ -15,10 +15,8 @@ export default class RenderAvislist extends Component {
         this.state = {avislist: []};
     }
 
-    componentDidMount() {
-        const port = process.env.PORT || 5000;
-        
-        axios.get(`http://localhost:${port}/avis/`)
+    componentDidMount() {        
+        axios.get('http://localhost:5000/avis/')
         .then(response => {
             this.setState({ avislist: response.data })
         })
